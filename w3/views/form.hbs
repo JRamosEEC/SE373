@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <title>Form</title>
+</head>
+
+<style>
+    body {
+        background-color: #0e0e0e;
+        font-family: "Roboto","Arial",sans-serif;
+        font-size: 18px;
+        color: #f3f3f3;
+        min-width: 100%;
+
+        min-height: 100%;
+    }
+
+    form {
+        padding-top: 50vh;
+    }
+
+    #formContainer {
+        max-width: 100%;
+
+        margin-bottom: 50px;
+    }
+
+    #submitBtn {
+        display: inline-block;
+        width: 160px;
+        height: 45px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border: none;
+        background-color: #2C2D43;
+        color: #f1f1f1;
+        font-size: 18px;
+        font-family: "Roboto","Arial",sans-serif;
+        font-style: normal;
+        text-align: center;
+        line-height: 42px;
+        vertical-align: middle;
+        transition: all 0.15s;
+
+        outline: none;
+    }
+    #submitBtn:hover {
+        outline: 1px solid white;
+    }
+    #submitBtn:not(:disabled):not(.disabled).active, #submitBtn:not(:disabled):not(.disabled):active, .show>#submitBtn.dropdown-toggle {
+    outline-color: #4d4f74;
+    outline-width: 0.2rem;
+    background-color: #1e1e30;
+    color: #f1f1f1;
+}
+
+    .no-margin {
+        margin: 0 !important;
+    }
+
+    .no-marginL {
+        margin-left: 0 !important;
+    }
+
+    .no-marginR {
+        margin-right: 0 !important;
+    }
+
+    .no-pad {
+        padding: 0 !important;
+    }
+
+    .no-padL {
+        padding-left: 0 !important;
+    }
+
+    .no-padR {
+        padding-right: 0 !important;
+    }
+</style>
+
+<body>
+    <div id="formContainer" class="row center no-pad no-marginR no-marginL">
+        <div id="spacer" class="col-3"></div>
+        
+        <form action="/NodeClass/w3/results" method="POST" class="col-6">
+            <label for="numPicker">Choose a number:</label>
+            <select name="numPicker" id="numPicker">
+                {{selectList "3,4,5,10,20"}}
+            </select>
+            
+            <input id="submitBtn" type="submit" value="submit">
+        </form>
+
+        <div id="spacer" class="col-3"></div>
+    </div>
+</body>
+</html>

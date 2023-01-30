@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <title>Results</title>
+</head>
+
+<style>
+    body {
+        background-color: #0e0e0e;
+        font-family: "Roboto","Arial",sans-serif;
+        font-size: 18px;
+        color: #f3f3f3;
+        min-width: 100%;
+
+        min-height: 100%;
+    }
+
+    #container {
+        margin-top: 35vh;
+    }
+
+    .no-margin {
+        margin: 0 !important;
+    }
+
+    .no-marginL {
+        margin-left: 0 !important;
+    }
+
+    .no-marginR {
+        margin-right: 0 !important;
+    }
+
+    .no-pad {
+        padding: 0 !important;
+    }
+
+    .no-padL {
+        padding-left: 0 !important;
+    }
+
+    .no-padR {
+        padding-right: 0 !important;
+    }
+
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div id="container" class="row center no-pad no-marginR no-marginL">
+        <div id="spacer" class="col-3"></div>
+
+        <div class="col-6">
+            <div class="row d-flex justify-content-center">
+                <h1>You picked: {{numberFromForm}}</h1>
+            </div>
+            
+            <div class="row d-flex justify-content-center">
+                {{generateColorGrid}}
+            </div>
+        </div>
+
+        <div id="spacer" class="col-3"></div>
+    </div>
+</body>
+</html>
